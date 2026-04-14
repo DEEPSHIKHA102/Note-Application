@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const App = () => {
   const [title, setTitle] = useState("");
@@ -12,8 +12,8 @@ const App = () => {
     copyTask.push({ title, details });
 
     setTask(copyTask);
-    console.log(copyTask);
-    console.log(task);
+    // console.log(copyTask);
+    // console.log(task);
 
     setTitle("");
     setDetails("");
@@ -44,8 +44,7 @@ const App = () => {
         <h1 className="text-3xl font-bold text-gray-800">Add Notes</h1>
 
         <input
-          className="border border-gray-300 focus:border-gray-600 focus:ring-1 focus:ring-gray-400 w-full rounded-md p-2 outline-none transition" // improved focus UI
-          type="text"
+          className="border border-gray-300 focus:border-gray-600 text-lg focus:ring-1 focus:ring-gray-400 w-full rounded-md p-2 outline-none transition" 
           placeholder="Heading of your notes"
           value={title}
           onChange={(e) => {
@@ -54,7 +53,7 @@ const App = () => {
         />
 
         <textarea
-          className="border border-gray-300 focus:border-gray-600 focus:ring-1 focus:ring-gray-400 w-full rounded-md p-2 min-h-[120px] outline-none transition resize-none" // better UX
+          className="border border-gray-300 focus:border-gray-600 text-lg focus:ring-1 focus:ring-gray-400 w-full rounded-md p-2 min-h-[120px] outline-none transition resize-none" 
           placeholder="Write details about your notes here..."
           value={details}
           onChange={(e) => {
@@ -63,7 +62,7 @@ const App = () => {
         />
 
         <button
-          className="bg-gray-800 active:scale-95 rounded-lg w-full text-white p-2 hover:bg-black transition-all duration-200 shadow-md" // better button feel
+          className="bg-gray-800 active:scale-95 rounded-lg w-full text-white p-2 hover:bg-black transition-all duration-200 shadow-md" 
           type="submit"
         >
           Submit
